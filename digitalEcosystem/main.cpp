@@ -40,15 +40,8 @@ int main() {
         }
     }
     
-    // randomly spawn a cell
-    int random_index = rand() % hexMap.size();
-    HexTile *random_tile = &std::next(hexMap.begin(), random_index)->second;
+    random_spawn(30, &hexMap);
     
-    if (random_tile->is_occupied() == false){
-        random_tile->setFillColor(sf::Color(204, 227, 186));
-        random_tile->set_occupied();
-    }
-
     while (window.isOpen()){
         sf::Event event;
         // handle all events
@@ -58,15 +51,19 @@ int main() {
                     window.close();
                     break;
                 }
-//                case sf::Event::MouseButtonPressed: {
-//                    
-//                    
-//                }
                 case sf::Event::KeyPressed:{
                     if (event.key.code == sf::Keyboard::Period){
                         view.zoom(0.8f);
                     } else if (event.key.code == sf::Keyboard::Comma) {
                         view.zoom(1.2f);
+                    }else if (event.key.code == sf::Keyboard::Up) {
+                        view.move(0, -50);
+                    }else if (event.key.code == sf::Keyboard::Down) {
+                        view.move(0,50);
+                    }else if (event.key.code == sf::Keyboard::Left) {
+                        view.move(-50, 0);
+                    }else if (event.key.code == sf::Keyboard::Right) {
+                        view.move(50, 0);
                     }
                 }
                 default: {

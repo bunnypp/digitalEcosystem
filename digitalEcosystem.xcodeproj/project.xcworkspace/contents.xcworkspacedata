@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/bunnyphetmunee/Desktop/Programming/Cpp/SFML-test/digitalEcosystem.xcodeproj">
    </FileRef>
 </Workspace>

@@ -32,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		436ADA622A5307B800C0F0C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		436ADA722A530D9900C0F0C7 /* SFML-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SFML-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		436ADA722A530D9900C0F0C7 /* digitalEcosystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = digitalEcosystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		436ADA742A530F8600C0F0C7 /* libsfml-audio.2.6.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-audio.2.6.0.dylib"; path = "SFML-macOS/lib/libsfml-audio.2.6.0.dylib"; sourceTree = "<group>"; };
 		436ADA752A530F8600C0F0C7 /* libsfml-system.2.6.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.6.0.dylib"; path = "SFML-macOS/lib/libsfml-system.2.6.0.dylib"; sourceTree = "<group>"; };
 		436ADA762A530F8600C0F0C7 /* libsfml-network.2.6.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-network.2.6.0.dylib"; path = "SFML-macOS/lib/libsfml-network.2.6.0.dylib"; sourceTree = "<group>"; };
@@ -65,13 +65,13 @@
 		436ADA562A5307B800C0F0C7 = {
 			isa = PBXGroup;
 			children = (
-				436ADA612A5307B800C0F0C7 /* SFML-test */,
-				436ADA722A530D9900C0F0C7 /* SFML-test */,
+				436ADA612A5307B800C0F0C7 /* digitalEcosystem */,
+				436ADA722A530D9900C0F0C7 /* digitalEcosystem */,
 				436ADA732A530F8500C0F0C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		436ADA612A5307B800C0F0C7 /* SFML-test */ = {
+		436ADA612A5307B800C0F0C7 /* digitalEcosystem */ = {
 			isa = PBXGroup;
 			children = (
 				436ADA622A5307B800C0F0C7 /* main.cpp */,
@@ -82,7 +82,7 @@
 				436ADA882A57DC0F00C0F0C7 /* biome.hpp */,
 				436ADA822A53F61A00C0F0C7 /* collision.hpp */,
 			);
-			path = "SFML-test";
+			path = digitalEcosystem;
 			sourceTree = "<group>";
 		};
 		436ADA732A530F8500C0F0C7 /* Frameworks */ = {
@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		436ADA5E2A5307B800C0F0C7 /* SFML-test */ = {
+		436ADA5E2A5307B800C0F0C7 /* digitalEcosystem */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 436ADA662A5307B800C0F0C7 /* Build configuration list for PBXNativeTarget "SFML-test" */;
+			buildConfigurationList = 436ADA662A5307B800C0F0C7 /* Build configuration list for PBXNativeTarget "digitalEcosystem" */;
 			buildPhases = (
 				436ADA5B2A5307B800C0F0C7 /* Sources */,
 				436ADA5C2A5307B800C0F0C7 /* Frameworks */,
@@ -112,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = "SFML-test";
+			name = digitalEcosystem;
 			productName = "SFML-test";
-			productReference = 436ADA722A530D9900C0F0C7 /* SFML-test */;
+			productReference = 436ADA722A530D9900C0F0C7 /* digitalEcosystem */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 436ADA5A2A5307B800C0F0C7 /* Build configuration list for PBXProject "SFML-test" */;
+			buildConfigurationList = 436ADA5A2A5307B800C0F0C7 /* Build configuration list for PBXProject "digitalEcosystem" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				436ADA5E2A5307B800C0F0C7 /* SFML-test */,
+				436ADA5E2A5307B800C0F0C7 /* digitalEcosystem */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		436ADA5A2A5307B800C0F0C7 /* Build configuration list for PBXProject "SFML-test" */ = {
+		436ADA5A2A5307B800C0F0C7 /* Build configuration list for PBXProject "digitalEcosystem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				436ADA642A5307B800C0F0C7 /* Debug */,
@@ -312,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		436ADA662A5307B800C0F0C7 /* Build configuration list for PBXNativeTarget "SFML-test" */ = {
+		436ADA662A5307B800C0F0C7 /* Build configuration list for PBXNativeTarget "digitalEcosystem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				436ADA672A5307B800C0F0C7 /* Debug */,

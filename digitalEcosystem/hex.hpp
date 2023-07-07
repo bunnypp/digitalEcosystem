@@ -17,24 +17,18 @@
 #include <SFML/Graphics.hpp>
 
 
-
 /* CLASS & STRUCT DEFINITONS */
 template <typename Number, int w>
 struct _Hex { // Vector storage, cube constructor
     const Number v[3];
-    _Hex(Number q, Number r, Number s): v{q, r, s} {
-        assert (q + r + s == 0);
-    }
-    inline Number q() const { return v[0]; }
-    inline Number r() const { return v[1]; }
-    inline Number s() const { return v[2]; }
-    
+    _Hex(Number q, Number r, Number s);
+    Number q() const;
+    Number r() const;
+    Number s() const;
     bool operator==(const _Hex<int, 1>& other) const {
-        return (this->q() == other.q() &&  this->r() == other.r() && this->s() == other.s());
+            return (this->q() == other.q() &&  this->r() == other.r() && this->s() == other.s());
     }
-    
 };
-
 
 typedef _Hex<int, 1> Hex;
 typedef _Hex<double, 1> FractionalHex;
@@ -50,6 +44,7 @@ struct Orientation {
       b0(b0_), b1(b1_), b2(b2_), b3(b3_),
       start_angle(start_angle_) {}
 };
+
 struct Point {
     const double v[2];
     Point(double x, double y): v{x, y} {}
@@ -65,41 +60,19 @@ struct Layout {
 };
 namespace std {
 template <> struct hash<Hex> {
-    size_t operator()(const Hex& h) const {
-        hash<int> int_hash;
-        size_t hq = int_hash(h.q());
-        size_t hr = int_hash(h.r());
-        return hq ^ (hr + 0x9e3779b9 + (hq << 6) + (hq >> 2));
-    }
+    size_t operator()(const Hex& h) const;
 };
 }
-
+class BioBot;
 class HexTile: public sf::CircleShape {
 private:
     bool occupied;
     BioBot *occupant;
 public:
-    HexTile(float radius, int x, int y): sf::CircleShape(radius-1) {
-        this->setOrigin( radius/2, radius/2);
-        this->setPointCount(6);
-        this->setPosition(x, y);
-        this->setFillColor(sf::Color(252, 232, 177));
-        this->setOutlineThickness(2);
-        this->setOutlineColor(sf::Color(254, 240, 196));
-        this->occupied = false;
-        this->occupant = NULL;
-        
-    }
-    inline bool is_occupied(){ return (this->occupied == true);};
-    void set_occupied() {
-        if (this->occupied){
-            this->occupied = false;
-            return;
-        }
-        this->occupied = true;
-    };
+    HexTile(float radius, int x, int y);
+    bool is_occupied();
+    void set_occupied(BioBot *bb);
 };
-
 
 
 /* CONSTANTS */
@@ -124,3 +97,4 @@ FractionalHex pixel_to_hex(Layout layout, Point p);
 Hex hex_round(FractionalHex h);
 
 #endif /* hex_hpp */
+
